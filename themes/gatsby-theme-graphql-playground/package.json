@@ -20,21 +20,19 @@
     "react-dom": "^16.11.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
     "@mdx-js/mdx": "^1.5.5",
-    "@mdx-js/react": "^1.5.5",
-    "@theme-ui/presets": "^0.2.44",
-    "@theme-ui/prism": "^0.2.50",
-    "@theme-ui/sidenav": "^0.2.53",
-    "gatsby-plugin-mdx": "^1.0.70",
-    "gatsby-plugin-react-helmet": "^3.1.22",
-    "gatsby-plugin-theme-ui": "^0.2.53",
-    "gatsby-plugin-typescript": "^2.1.27",
-    "gatsby-source-filesystem": "^2.1.48",
+    "@theme-ui/presets": "^0.3.0",
+    "@theme-ui/prism": "^0.3.0",
+    "@theme-ui/sidenav": "^0.3.1",
+    "gatsby-plugin-mdx": "^1.0.67",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-source-filesystem": "^2.1.46",
     "is-absolute-url": "^3.0.3",
     "re-resizable": "^6.2.0",
     "react-helmet": "^5.2.1",
-    "theme-ui": "^0.2.52"
+    "theme-ui": "^0.3.1"
   },
   "keywords": [
     "gatsby",

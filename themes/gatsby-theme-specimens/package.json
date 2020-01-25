@@ -21,12 +21,11 @@
     "react-dom": "^16.9.0"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
     "@styled-system/css": "^5.1.4",
     "chroma-js": "^2.1.0",
-    "gatsby-plugin-typescript": "^2.1.27",
-    "polished": "^3.4.4",
-    "theme-ui": "^0.2.52"
+    "gatsby-plugin-typescript": "^2.1.26",
+    "polished": "^3.4.2",
+    "theme-ui": "^0.3.1"
   },
   "keywords": [
     "gatsby",
