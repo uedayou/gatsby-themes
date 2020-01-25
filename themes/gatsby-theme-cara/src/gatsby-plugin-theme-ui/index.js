@@ -2,7 +2,7 @@ import { tailwind } from "@theme-ui/presets"
 
 export default {
   ...tailwind,
-  initialColorMode: `dark`,
+  initialColorModeName: `dark`,
   useCustomProperties: true,
   colors: {
     ...tailwind.colors,
@@ -83,15 +83,6 @@ export default {
         },
       },
     },
-    Footer: {
-      textAlign: `center`,
-      display: `block`,
-      position: `absolute`,
-      bottom: 0,
-      color: `textMuted`,
-      px: [2, 3],
-      py: [3, 4],
-    },
     Container: {
       maxWidth: `5xl`,
     },
@@ -167,5 +158,14 @@ export default {
         fontSize: [2, 3, 4],
       },
     },
+  },
+  footer: {
+    textAlign: `center`,
+    display: `block`,
+    position: `absolute`,
+    bottom: 0,
+    color: `textMuted`,
+    px: [2, 3],
+    py: [3, 4],
   },
 }
