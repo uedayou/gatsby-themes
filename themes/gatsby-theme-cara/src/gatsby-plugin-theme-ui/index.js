@@ -82,6 +82,9 @@ export default {
           textDecoration: `none`,
         },
       },
+      textRendering: `optimizeLegibility`,
+      WebkitFontSmoothing: `antialiased`,
+      MozOsxFontSmoothing: `grayscale`,
     },
     Container: {
       maxWidth: `5xl`,
