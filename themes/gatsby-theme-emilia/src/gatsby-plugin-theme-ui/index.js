@@ -2,7 +2,7 @@ import { tailwind } from "@theme-ui/presets"
 
 export default {
   ...tailwind,
-  initialColorMode: `light`,
+  initialColorModeName: `light`,
   useCustomProperties: true,
   colors: {
     ...tailwind.colors,
@@ -31,18 +31,30 @@ export default {
       },
     },
   },
+  layout: {
+    container: {
+      px: [3, 4],
+      py: [2, 3],
+      maxWidth: `1600px`,
+    },
+    footer: {
+      display: `block`,
+      color: `text`,
+      pt: 6,
+      pb: 4,
+    },
+    header: {
+      position: `relative`,
+      overflow: `hidden`,
+      justifyContent: `center`,
+    },
+  },
   styles: {
     ...tailwind.styles,
     root: {
       ...tailwind.styles.root,
       color: `text`,
       backgroundColor: `background`,
-    },
-    Footer: {
-      display: `block`,
-      color: `text`,
-      pt: 6,
-      pb: 4,
     },
     a: {
       ...tailwind.styles.a,
@@ -51,17 +63,6 @@ export default {
     Main: {
       ...tailwind.styles.Main,
       position: `relative`,
-    },
-    Header: {
-      ...tailwind.styles.Header,
-      position: `relative`,
-      overflow: `hidden`,
-      justifyContent: `center`,
-    },
-    Container: {
-      px: [3, 4],
-      py: [2, 3],
-      maxWidth: `1600px`,
     },
     p: {
       fontSize: 1,

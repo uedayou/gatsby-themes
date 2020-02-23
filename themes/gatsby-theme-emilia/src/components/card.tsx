@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx, Styled } from "theme-ui"
-import { Link } from "gatsby"
+import { jsx, Link, Heading } from "theme-ui"
+import { Link as GatsbyLink } from "gatsby"
 import Img from "gatsby-image"
 import { ChildImageSharp } from "../types"
 
@@ -34,8 +34,8 @@ const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false 
   }
 
   return (
-    <Styled.a
-      as={Link}
+    <Link
+      as={GatsbyLink}
       aria-label={`Visit ${item.title} project page`}
       sx={{
         outline: `none`,
@@ -71,12 +71,12 @@ const Card = ({ item, overlay = `0, 0, 0`, shadow = shadowArray, inGrid = false 
         }}
         data-name="card-overlay"
       >
-        <Styled.h2 sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px`, color: `white` }}>
+        <Heading as="h2" sx={{ my: 0, textShadow: `rgba(0, 0, 0, 0.2) 0px 2px 12px`, color: `white` }}>
           {item.title}
-        </Styled.h2>
+        </Heading>
       </div>
       <Img fluid={item.cover.childImageSharp.fluid} />
-    </Styled.a>
+    </Link>
   )
 }
 
