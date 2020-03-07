@@ -13,6 +13,7 @@ module.exports = options => {
       siteLanguage: `en`,
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
+      siteLicense: `All rights reserved`,
     },
     plugins: [
       {
