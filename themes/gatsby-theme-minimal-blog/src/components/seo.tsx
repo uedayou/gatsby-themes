@@ -1,6 +1,7 @@
 import React from "react"
 import Helmet from "react-helmet"
 import useSiteMetadata from "../hooks/use-site-metadata"
+import { globalHistory } from "@reach/router"
 
 const defaultProps = {
   title: ``,
@@ -31,12 +32,17 @@ const SEO = ({ title, description, pathname, image, children }: Props) => {
     author,
   } = site
 
+  // 引数のpathname が取得できないときは globalHistory.location.pathname を使う
+  // 参考:https://github.com/gatsbyjs/gatsby/issues/1875
+  pathname = pathname || globalHistory.location.pathname
+  
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
     url: `${siteUrl}${pathname || ``}`,
     image: `${siteUrl}${image || defaultImage}`,
   }
+
   return (
     <Helmet title={title} defaultTitle={defaultTitle} titleTemplate={`%s | ${siteTitle}`}>
       <html lang={siteLanguage} />
