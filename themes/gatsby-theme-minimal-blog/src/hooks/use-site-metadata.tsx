@@ -12,6 +12,8 @@ type Props = {
       siteImage: string
       author: string
       siteLicense: string
+      blogLabel: string
+      tagsLabel: string
       [key: string]: unknown
     }
   }
@@ -31,6 +33,8 @@ const useSiteMetadata = () => {
           siteImage
           author
           siteLicense
+          blogLabel
+          tagsLabel
         }
       }
     }

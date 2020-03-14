@@ -14,6 +14,8 @@ module.exports = options => {
       siteImage: `/banner.jpg`,
       author: `@lekoarts_de`,
       siteLicense: `All rights reserved`,
+      blogLabel: `Blog`,
+      tagsLabel: `Tags`,
     },
     plugins: [
       {

@@ -8,6 +8,8 @@ import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import replaceSlashes from "../utils/replaceSlashes"
 import SEO from "./seo"
 
+import useSiteMetadata from "../hooks/use-site-metadata"
+
 type PostsProps = {
   posts: {
     slug: string
@@ -26,11 +28,13 @@ type PostsProps = {
 const Blog = ({ posts }: PostsProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig()
 
+  const { blogLabel } = useSiteMetadata()
+
   return (
     <Layout>
-      <SEO title="Blog" />
+      <SEO title={blogLabel} />
       <Flex sx={{ alignItems: `center`, justifyContent: `space-between`, flexFlow: `wrap` }}>
-        <Styled.h2>Blog</Styled.h2>
+        <Styled.h2>{blogLabel}</Styled.h2>
         <Styled.a as={Link} sx={{ variant: `links.secondary` }} to={replaceSlashes(`/${basePath}/${tagsPath}`)}>
           View all tags
         </Styled.a>

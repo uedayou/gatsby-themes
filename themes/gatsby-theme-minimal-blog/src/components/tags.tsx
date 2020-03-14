@@ -8,6 +8,8 @@ import useMinimalBlogConfig from "../hooks/use-minimal-blog-config"
 import SEO from "./seo"
 import replaceSlashes from "../utils/replaceSlashes"
 
+import useSiteMetadata from "../hooks/use-site-metadata"
+
 type PostsProps = {
   list: {
     fieldValue: string
@@ -18,10 +20,12 @@ type PostsProps = {
 const Tags = ({ list }: PostsProps) => {
   const { tagsPath, basePath } = useMinimalBlogConfig()
 
+  const { tagsLabel } = useSiteMetadata()
+
   return (
     <Layout>
-      <SEO title="Tags" />
-      <Styled.h2>Tags</Styled.h2>
+      <SEO title={tagsLabel} />
+      <Styled.h2>{tagsLabel}</Styled.h2>
       <Box mt={[4, 5]}>
         {list.map(listItem => (
           <Flex key={listItem.fieldValue} mb={[1, 1, 2]} sx={{ alignItems: `center` }}>
